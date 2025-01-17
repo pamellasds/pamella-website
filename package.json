@@ -1,12 +1,12 @@
 {
   "name": "pamella-website",
-  "homepage": "https://yourusername.github.io/repository-name",
+  "homepage": "https://pamellasds.github.io/pamella-website",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
+    "deploy": "main -d dist",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",

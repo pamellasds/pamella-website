@@ -89,21 +89,21 @@ const PortfolioV2 = () => {
         authors: "P Soares, AA Araújo, R Saraiva, J Souza",
         venue: "Simpósio Brasileiro de Engenharia de Software (SBES)",
         year: "2024",
-        pdfPath: "/assets/papers/2024/2024_sbes_towards_bcdex.pdf",
+        pdfPath: "/pamella-website/assets/papers/2024/2024_sbes_towards_bcdex.pdf",
       },
       {
         title: "Sociotechnical Dynamics in Smart Contract Repositories",
         authors: "S Costa, M Paixao, I Steinmacher, P Soares, AA Araújo, J Souza",
         venue: "International Conference on Predictive Models",
         year: "2024",
-        pdfPath: "/assets/pdfs/smart-contract-2024.pdf",
+        pdfPath: "/pamella-website/assets/pdfs/smart-contract-2024.pdf",
       },
       {
         title: "Innovation Drivers in Metaverses",
         authors: "S Câmara, A Allex Araújo, B Buarque, P Soares, L Queiroz, J Souza",
         venue: "International Journal of Innovation and Technology Management",
         year: "2024",
-        pdfPath: "/assets/pdfs/metaverse-2024.pdf",
+        pdfPath: "/pamella-website/assets/pdfs/metaverse-2024.pdf",
       }
     ]
   };
@@ -159,7 +159,7 @@ const PortfolioV2 = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="flex flex-col md:flex-row items-center gap-8">
             <img
-              src="/assets/images/profile_in.jpg"
+              src="/pamella-website/assets/images/profile_in.jpg"
               alt="Profile"
               className="rounded-full w-40 h-40 border-4 border-purple-300/30 shadow-xl object-cover"
               onError={(e) => {
