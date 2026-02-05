@@ -1,0 +1,220 @@
+/* === Base sidebar (neutral/white) === */
+.sidebar {
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  bottom: 0;
+  width: var(--sidebar-width);
+  background: var(--white);
+  border-right: 1px solid var(--gray-medium);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  z-index: 900;
+  transition: transform 0.3s ease;
+}
+
+.sidebar-overlay {
+  display: none;
+}
+
+/* === Profile Section === */
+.sidebar-profile {
+  padding: 32px 24px 24px;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.sidebar-photo-wrap {
+  width: 160px;
+  height: 160px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid var(--white);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+.sidebar-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sidebar-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.sidebar-title {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  margin-bottom: 4px;
+}
+
+.sidebar-location {
+  font-size: 0.78rem;
+  color: var(--text-light);
+}
+
+/* === Navigation === */
+.sidebar-nav {
+  padding: 16px 12px;
+  flex: 1;
+}
+
+.sidebar-link {
+  display: block;
+  padding: 10px 16px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  border-radius: var(--radius-sm);
+  border-left: 3px solid transparent;
+  transition: all 0.2s;
+  margin-bottom: 2px;
+}
+
+.sidebar-link:hover {
+  color: var(--text-primary);
+  background: var(--gray-light);
+}
+
+.sidebar-link.active {
+  color: var(--yellow-deepest);
+  font-weight: 600;
+  background: var(--yellow-lightest);
+  border-left-color: var(--yellow-medium);
+}
+
+/* === Bottom Section === */
+.sidebar-bottom {
+  padding: 16px 24px 24px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.sidebar-cv-btn {
+  width: 100%;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1.5px solid rgba(0, 0, 0, 0.15);
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.sidebar-cv-btn:hover {
+  background: var(--white);
+  border-color: var(--yellow-medium);
+}
+
+/*
+ * =============================================
+ *  YELLOW THEME (egg yellow sidebar)
+ *  To revert to neutral: change "sidebar--yellow"
+ *  to "sidebar--neutral" in Sidebar.jsx
+ * =============================================
+ */
+.sidebar--yellow {
+  background: var(--yellow-medium);
+  border-right: none;
+}
+
+.sidebar--yellow .sidebar-profile {
+  border-bottom-color: rgba(0, 0, 0, 0.1);
+}
+
+.sidebar--yellow .sidebar-photo-wrap {
+  border-color: var(--white);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+}
+
+.sidebar--yellow .sidebar-name {
+  color: var(--accent-dark);
+}
+
+.sidebar--yellow .sidebar-title {
+  color: rgba(31, 41, 55, 0.75);
+}
+
+.sidebar--yellow .sidebar-location {
+  color: rgba(31, 41, 55, 0.6);
+}
+
+.sidebar--yellow .sidebar-link {
+  color: rgba(31, 41, 55, 0.7);
+  border-left-color: transparent;
+}
+
+.sidebar--yellow .sidebar-link:hover {
+  color: var(--accent-dark);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.sidebar--yellow .sidebar-link.active {
+  color: var(--accent-dark);
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.5);
+  border-left-color: var(--accent-dark);
+}
+
+.sidebar--yellow .sidebar-bottom {
+  border-top-color: rgba(0, 0, 0, 0.1);
+}
+
+.sidebar--yellow .sidebar-cv-btn {
+  background: rgba(255, 255, 255, 0.4);
+  border-color: rgba(255, 255, 255, 0.7);
+  color: var(--accent-dark);
+}
+
+.sidebar--yellow .sidebar-cv-btn:hover {
+  background: var(--white);
+  border-color: var(--white);
+}
+
+.sidebar--yellow .social-link {
+  color: rgba(31, 41, 55, 0.6);
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.sidebar--yellow .social-link:hover {
+  color: var(--accent-dark);
+  background: var(--white);
+}
+
+/*
+ * =============================================
+ *  NEUTRAL THEME (revert option)
+ *  Use class "sidebar--neutral" to get white sidebar
+ * =============================================
+ */
+.sidebar--neutral {
+  background: var(--white);
+  border-right: 1px solid var(--gray-medium);
+}
+
+/* === Mobile === */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .sidebar-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 899;
+  }
+}

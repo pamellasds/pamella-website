@@ -1,0 +1,172 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(249, 250, 251, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  height: var(--header-height);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 24px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  cursor: pointer;
+  letter-spacing: -0.01em;
+  transition: color 0.2s;
+}
+
+.header-name:hover {
+  color: var(--yellow-dark);
+}
+
+/* === Right side === */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* === Toggle === */
+.mode-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mode-label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: color 0.2s;
+  user-select: none;
+}
+
+.mode-label:hover {
+  color: var(--text-secondary);
+}
+
+.mode-label.active {
+  color: var(--yellow-deepest);
+  font-weight: 600;
+}
+
+.mode-label.active .mode-icon {
+  stroke: var(--yellow-dark);
+}
+
+.mode-icon {
+  stroke: var(--text-light);
+  transition: stroke 0.2s;
+}
+
+.toggle-switch {
+  position: relative;
+  width: 44px;
+  height: 24px;
+  background: var(--gray-light);
+  border: 2px solid var(--gray-medium);
+  border-radius: 12px;
+  cursor: pointer;
+  padding: 0;
+  transition: border-color 0.2s;
+}
+
+.toggle-switch:hover {
+  border-color: var(--yellow-medium);
+}
+
+.toggle-knob {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background: var(--yellow-medium);
+  border-radius: 50%;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.toggle-knob.right {
+  transform: translateX(20px);
+}
+
+/* === Language Toggle === */
+.lang-toggle {
+  padding: 5px 12px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: var(--gray-light);
+  border: 1.5px solid var(--gray-medium);
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+
+.lang-toggle:hover {
+  background: var(--yellow-lightest);
+  border-color: var(--yellow-medium);
+  color: var(--yellow-deepest);
+}
+
+/* === Hamburger (mobile) === */
+.header-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.header-hamburger span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--text-primary);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+.header-hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(4px, 4px);
+}
+
+.header-hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.header-hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@media (max-width: 768px) {
+  .header-hamburger {
+    display: flex;
+  }
+}

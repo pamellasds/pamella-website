@@ -1,0 +1,16 @@
+.skill-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--yellow-deepest);
+  background: var(--yellow-lightest);
+  border: 1px solid var(--yellow-light);
+  border-radius: 20px;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+
+.skill-badge:hover {
+  background: var(--yellow-light);
+}

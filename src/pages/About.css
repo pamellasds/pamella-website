@@ -1,0 +1,174 @@
+.about-section {
+  margin-bottom: 48px;
+}
+
+.about-section:last-child {
+  margin-bottom: 0;
+}
+
+.about-summary {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+.about-heading {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--yellow-light);
+}
+
+/* === Education === */
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+  padding-left: 24px;
+}
+
+.education-list::before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background: var(--gray-medium);
+}
+
+.education-item {
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.education-item:last-child {
+  padding-bottom: 0;
+}
+
+.education-dot {
+  position: absolute;
+  left: -24px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--yellow-medium);
+  border: 2px solid var(--white);
+  box-shadow: 0 0 0 2px var(--yellow-medium);
+  z-index: 1;
+}
+
+.education-degree {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.education-institution {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.education-period {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  margin-top: 2px;
+}
+
+.education-note {
+  font-size: 0.8rem;
+  color: var(--yellow-deepest);
+  font-style: italic;
+  margin-top: 4px;
+  padding: 4px 10px;
+  background: var(--yellow-lightest);
+  border-radius: var(--radius-sm);
+  display: inline-block;
+}
+
+/* === Research Interests === */
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 12px;
+}
+
+.interest-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: var(--white);
+  border: 1px solid var(--gray-medium);
+  border-radius: var(--radius);
+  transition: all 0.2s;
+}
+
+.interest-card:hover {
+  border-color: var(--yellow-medium);
+  box-shadow: 0 4px 20px rgba(245, 197, 24, 0.1);
+  transform: translateY(-2px);
+}
+
+.interest-icon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: var(--yellow-lightest);
+  color: var(--yellow-deepest);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.interest-label {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+/* === Languages === */
+.languages-list {
+  display: flex;
+  gap: 16px;
+}
+
+.language-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: var(--white);
+  border: 1px solid var(--gray-medium);
+  border-radius: var(--radius);
+}
+
+.language-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.language-level {
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+@media (max-width: 768px) {
+  .interests-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .languages-list {
+    flex-direction: column;
+  }
+}

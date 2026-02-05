@@ -1,0 +1,164 @@
+.timeline {
+  position: relative;
+  padding-left: 32px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: var(--gray-medium);
+}
+
+/* === Timeline Item === */
+.timeline-item {
+  position: relative;
+  padding-bottom: 36px;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -32px;
+  top: 6px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--gray-medium);
+  border: 3px solid var(--white);
+  box-shadow: 0 0 0 2px var(--gray-medium);
+  z-index: 1;
+}
+
+.timeline-item.current .timeline-dot {
+  background: var(--yellow-medium);
+  box-shadow: 0 0 0 2px var(--yellow-medium);
+}
+
+.timeline-pulse {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid var(--yellow-medium);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.8); }
+}
+
+/* === Content === */
+.timeline-content {
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: var(--radius);
+  padding: 24px;
+  transition: all 0.2s;
+}
+
+.timeline-item.current .timeline-content {
+  border-color: var(--yellow-light);
+}
+
+.timeline-content:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.timeline-role {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+.timeline-period {
+  flex-shrink: 0;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-light);
+  padding: 3px 10px;
+  background: var(--gray-light);
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.timeline-item.current .timeline-period {
+  background: var(--yellow-lightest);
+  color: var(--yellow-deepest);
+}
+
+.timeline-company {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--yellow-deepest);
+  margin-bottom: 12px;
+}
+
+.timeline-location {
+  font-weight: 400;
+  color: var(--text-light);
+}
+
+.timeline-description {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.timeline-description li {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  padding-left: 16px;
+  position: relative;
+}
+
+.timeline-description li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--yellow-medium);
+}
+
+.timeline-techs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+@media (max-width: 768px) {
+  .timeline-header {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .timeline-period {
+    align-self: flex-start;
+  }
+
+  .timeline-content {
+    padding: 16px;
+  }
+}
