@@ -9,7 +9,7 @@ export const translations = {
 
     // Research menu
     nav_about: 'Sobre',
-    nav_publications: 'Publicacoes',
+    nav_publications: 'Publicações',
 
     // Industry menu
     nav_experience: 'Experiencias',
@@ -24,7 +24,7 @@ export const translations = {
     about_summary: 'Desenvolvedora blockchain e pesquisadora com mais de 5 anos de experiencia construindo smart contracts e aplicacoes descentralizadas usando Solidity, JavaScript e TypeScript. Liderou equipes de desenvolvimento agil para entregar solucoes blockchain governamentais e empresariais, traduzindo requisitos de negocio em implementacoes tecnicas escalaveis. Pesquisadora de doutorado com fortes habilidades analiticas e comprovada experiencia em inovacao blockchain e projetos de P&D.',
 
     // Publications page
-    pub_title: 'Publicacoes',
+    pub_title: 'Publicações',
     pub_subtitle: 'Artigos publicados em conferencias e journals',
     pub_preprint: 'Pre-print',
     pub_publisher: 'Publicacao',

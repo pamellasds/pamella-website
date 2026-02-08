@@ -28,9 +28,12 @@ export default function Header({ onToggleSidebar, sidebarOpen }) {
           >
             <span /><span /><span />
           </button>
-          <span className="header-name" onClick={() => navigate('/pesquisa/sobre')}>
-            Pamella Soares
-          </span>
+          <button className="header-home" onClick={() => navigate('/pesquisa/sobre')} aria-label="Home">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+              <polyline points="9 22 9 12 15 12 15 22" />
+            </svg>
+          </button>
         </div>
 
         <div className="header-right">
@@ -65,7 +68,7 @@ export default function Header({ onToggleSidebar, sidebarOpen }) {
           </div>
 
           <button className="lang-toggle" onClick={toggleLang} aria-label="Toggle language">
-            {lang === 'pt' ? 'EN' : 'PT'}
+            {lang === 'pt' ? '\u{1F1FA}\u{1F1F8} EN' : '\u{1F1E7}\u{1F1F7} PT'}
           </button>
         </div>
       </div>

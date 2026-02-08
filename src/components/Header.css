@@ -25,17 +25,24 @@
   gap: 12px;
 }
 
-.header-name {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--text-primary);
+.header-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: none;
+  border: 1.5px solid var(--gray-medium);
   cursor: pointer;
-  letter-spacing: -0.01em;
-  transition: color 0.2s;
+  color: var(--text-primary);
+  transition: all 0.2s;
 }
 
-.header-name:hover {
+.header-home:hover {
   color: var(--yellow-dark);
+  border-color: var(--yellow-medium);
+  background: var(--yellow-lightest);
 }
 
 /* === Right side === */
@@ -168,5 +175,9 @@
 @media (max-width: 768px) {
   .header-hamburger {
     display: flex;
+  }
+
+  .header-home {
+    display: none;
   }
 }

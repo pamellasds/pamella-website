@@ -8,8 +8,6 @@ export default function Publications() {
   const years = publications.map(p => p.year)
   const [selectedYear, setSelectedYear] = useState(null) // null = all
 
-  const totalPapers = publications.reduce((sum, p) => sum + p.papers.length, 0)
-
   const filteredPublications = selectedYear
     ? publications.filter(p => p.year === selectedYear)
     : publications
@@ -25,20 +23,17 @@ export default function Publications() {
           className={`pub-filter-btn ${selectedYear === null ? 'active' : ''}`}
           onClick={() => setSelectedYear(null)}
         >
-          All <span className="pub-filter-count">{totalPapers}</span>
+          All
         </button>
-        {years.map(year => {
-          const count = publications.find(p => p.year === year)?.papers.length || 0
-          return (
+        {years.map(year => (
             <button
               key={year}
               className={`pub-filter-btn ${selectedYear === year ? 'active' : ''}`}
               onClick={() => setSelectedYear(year)}
             >
-              {year} <span className="pub-filter-count">{count}</span>
+              {year}
             </button>
-          )
-        })}
+        ))}
       </div>
 
       {/* Publications list */}

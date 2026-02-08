@@ -57,10 +57,10 @@ export const profile = {
   },
 
   social: {
-    email: 'pamella.soares.web3@gmail.com',
+    email: 'pamella.soares@aluno.uece.br',
     linkedin: 'https://linkedin.com/in/pamellasoaresds',
     github: 'https://github.com/pamellasds',
-    googleScholar: 'https://scholar.google.com/citations?user=XXXX',
+    googleScholar: 'https://scholar.google.com/citations?user=ZWmLWIAAAAAJ&hl=pt-BR&authuser=1',
     orcid: 'https://orcid.org/0000-0002-8691-7180',
     lattes: 'http://lattes.cnpq.br/2415050920835932',
   },

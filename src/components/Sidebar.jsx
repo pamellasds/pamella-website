@@ -17,8 +17,8 @@ export default function Sidebar({ open, onClose }) {
 
   const industryLinks = [
     { to: '/industria/experiencias', label: t('nav_experience') },
-    { to: '/industria/projetos', label: t('nav_projects') },
     { to: '/industria/skills', label: t('nav_skills') },
+    { to: '/industria/projetos', label: t('nav_projects') },
   ]
 
   const links = mode === 'pesquisa' ? researchLinks : industryLinks
